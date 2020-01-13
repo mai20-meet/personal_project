@@ -12,6 +12,41 @@
 
 </style>
 <body>
+	<div class="mx-left" style="width: 500px;">
+
+	<table class="table table-borderless">
+
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>	  </div>
+
+<div class="mx-auto" style="width: 250px;">
+  <div class="form-group form-control form-control-lg ">
+    <label for="exampleFormControlSelect1">rate the tips!</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1 star- didn't really helped</option>
+      <option>2 stars- helped soso</option>
+      <option>3 stars- helped for a short time</option>
+      <option>4 stars- helped but need to be improved</option>
+      <option>5 stars- helped a lot, thank u</option>
+
+    </select>
+      <button class="btn btn-grey" type="submit">Submit</button>
+  </div>
+</div>
+</td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+<div class="mx-auto" style="width: 500px;">
+<img src="waytolove.jpg" class="rounded float-right" alt="way to love">
+</div>
 	<div class="mx-auto" style="width: 500px;">
 
 
@@ -84,6 +119,9 @@
   </tbody>
 </table>
 </div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -94,5 +132,25 @@
 	popover1();
 </script>
 
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 </body>
 </html>
