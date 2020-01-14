@@ -10,21 +10,42 @@
 			background-color: 	#EE82EE;
 		}
 
+
+
+.image {
+    position: absolute;
+    top: 32%;
+    left: 65%;
+    width: 500px;
+    height: 500px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 7s linear infinite;
+    -moz-animation:spin 7s linear infinite;
+    animation:spin 7s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.div {
+	    position: absolute;
+    top: 50%;
+    left: 3%;
+}
+
 </style>
 <body>
-	<div class="mx-left" style="width: 500px;">
+	<div class="div">
+		<h2 id="rlrl">YOU RATED US, TNX</h2>
+	</div>
 
-	<table class="table table-borderless">
+	 <h1><center>WAY TO LOVE</center></h1>
+	 <img id="image_canv" src="waytolove.jpg" class="image">
 
-  <tbody>
-    <tr>
-      <th scope="row"></th>
-      <td>	  </div>
-
-<div class="mx-auto" style="width: 250px;">
+	<div class="mx-right" style="width: 250px;">
   <div class="form-group form-control form-control-lg ">
     <label for="exampleFormControlSelect1">rate the tips!</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="roro">
       <option>1 star- didn't really helped</option>
       <option>2 stars- helped soso</option>
       <option>3 stars- helped for a short time</option>
@@ -32,9 +53,19 @@
       <option>5 stars- helped a lot, thank u</option>
 
     </select>
-      <button class="btn btn-grey" type="submit">Submit</button>
+      <button class="btn btn-grey" type="submit"onclick="rating()">Submit</button>
   </div>
 </div>
+	
+	<div class="mx-auto" style="width: 500px;">
+
+
+	<table class="table table-borderless">
+
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>	  </div>
 </td>
 
     </tr>
@@ -43,11 +74,6 @@
   </tbody>
 </table>
 
-</div>
-<div class="mx-auto" style="width: 500px;">
-<img src="waytolove.jpg" class="rounded float-right" alt="way to love">
-</div>
-	<div class="mx-auto" style="width: 500px;">
 
 
 
@@ -151,6 +177,16 @@
     });
   }, false);
 })();
+</script>
+<script type="text/javascript">
+	function rating(){
+var element = document.getElementById("roro");
+var selectedValue = element.options[element.selectedIndex].text;
+console.log(selectedValue);
+var NEVI = document.getElementById("rlrl");
+NEVI.innerHTML= selectedValue;
+	}
+
 </script>
 </body>
 </html>
