@@ -1,4 +1,3 @@
-
 from model import *
 
 
@@ -10,13 +9,21 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-cart = []
 
-def add_login(user_name, anonimos_name):
-    users = login(
-        user_name=user_name,
-        anonimos_name=anonimos_name,
-    session.add(users)
+def add_story(name, time, title, story):
+    story1 = Story(
+        name=name,
+        time=time,
+        title=title,
+        story=story
+        )
+    session.add(story1)
     session.commit()
 
+def query_all():
+	all_stories = session.query(Story).all()
+	return all_stories
 
+def delete_all():
+	session.query(Story).delete()
+	session.commit()

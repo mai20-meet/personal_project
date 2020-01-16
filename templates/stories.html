@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY BODY & I</title>
+	<style type="text/css">
+			body {
+			color: grey;
+			background-color: 	#EE82EE;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		{% for story in stories %}
+		<li> name: {{story.name}} </li>
+		<br>
+		<li> time: {{story.time}} </li>
+		<br>
+		<li> title: {{story.title}} </li>
+		<br>
+		<li> story: {{story.story}} </li>
+		<br>
+		<br>
+		{% endfor %}
+	</ul>
+
+
+</body>
+</html>
