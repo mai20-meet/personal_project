@@ -26,7 +26,7 @@ def story():
 
 
 		add_story(name, time, title, story)      
-		return render_template("stories.html", stories=query_all())
+		return redirect('access_stories')
 
 @app.route('/delete_stories')
 def delete():
@@ -35,15 +35,23 @@ def delete():
 
 @app.route('/access_stories')
 def access():
-	return render_template("stories.html", stories=query_all())
+	if request.method == 'POST':
+		comments = request.form['comments']
+		name = request.form['name']
 
-@app.route('/reserches')
-def reserches():
-	return render_template("reserches.html")
+		add_comment(name, comments)   
+		return render_template("stories.html", stories=query_all())
+	else:
+		return render_template("stories.html", stories=query_all())
+		
+
+@app.route('/researches')
+def researches():
+	return render_template("researches.html")
 
 # @app.route('/home')
 # def home():
 # 	return render_template("home.html")
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=True, threaded=True)

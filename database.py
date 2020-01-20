@@ -15,7 +15,8 @@ def add_story(name, time, title, story):
         name=name,
         time=time,
         title=title,
-        story=story
+        story=story,
+        comments=str()
         )
     session.add(story1)
     session.commit()
@@ -27,3 +28,11 @@ def query_all():
 def delete_all():
 	session.query(Story).delete()
 	session.commit()
+
+def add_comment(name, comments):
+	story = session.query(Story).filter_by(name=name).first()
+  	story.comments = comments
+	session.commit()
+
+
+

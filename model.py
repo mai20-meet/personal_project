@@ -12,6 +12,7 @@ class Story(Base):
    time=Column(String)
    title=Column(String)
    story=Column(String)
+   comments=Column(String)
 
    def __repr__(self):
    		return str(self.__dict__)

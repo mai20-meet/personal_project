@@ -23,6 +23,23 @@
 
 </head>
 <body>
+
+<div class="mx-top center" style="width: 700px;">
+    SHARE YOUR STORY WITH US
+<form action="/my_story" method="POST">
+    <input class="form-control form-control-lg center" type="text" name="name" placeholder="your name / anonymous name" .form-control-lg>
+    <br>
+   
+    <input class="form-control form-control-lg center" type="text" name="time" placeholder="time" .form-control-lg>
+    <br>
+    <input class="form-control form-control-lg center"  type="text" name="title" placeholder="title" .form-control-lg>
+    <br>
+    <textarea class="form-control form-control-lg center"  type="text" name="story" style="width: 500px" rows="3" placeholder="your story" .form-control-lg></textarea>
+    <br>
+    <input type="submit" value="POST">
+</form>
+</div>
+
 <div class="mx-center left" style="width: 700px;">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -51,20 +68,6 @@
   </a>
 </div>
 </div>
-
-	SHARE YOUR STORY WITH US
-<form action="/my_story" method="POST">
-    <input type="text" name="name" placeholder="your name / anonymous name">
-    <br>
-   
-    <input type="text" name="time" placeholder="time">
-    <br>
-    <input type="text" name="title" placeholder="title">
-    <br>
-    <textarea  type="text" name="story" style="width: 500px" rows="3" placeholder="your story"></textarea>
-    <br>
-    <input type="submit" value="POST">
-</form>
 
 
 
