@@ -7,7 +7,7 @@ app.secret_key = "MY_SUPER_SECRET_KEY"
 
 
 @app.route('/way_to_love')
-def home():
+def way_to_love():
 	return render_template("way_to_love.html")
 
 @app.route('/about_us')
@@ -33,11 +33,13 @@ def delete():
 	delete_all()
 	return render_template("stories.html")
 
-@app.route('/access_stories')
+@app.route('/access_stories', methods=['GET', 'POST'])
 def access():
 	if request.method == 'POST':
 		comments = request.form['comments']
 		name = request.form['name']
+		print(name)
+		print(comments)
 
 		add_comment(name, comments)   
 		return render_template("stories.html", stories=query_all())
@@ -45,13 +47,13 @@ def access():
 		return render_template("stories.html", stories=query_all())
 		
 
-@app.route('/researches')
-def researches():
-	return render_template("researches.html")
+@app.route('/reserches')
+def reserches():
+	return render_template("reserch.html")
 
-# @app.route('/home')
-# def home():
-# 	return render_template("home.html")
+@app.route('/home')
+def home():
+	return render_template("home.html") 
 
 if __name__ == '__main__':
-	app.run(debug=True, threaded=True)
+	app.run(debug=True, threaded=False)

@@ -1,0 +1,3 @@
+pip freeze > requierments.txt
+Procfile
+web: python app.py

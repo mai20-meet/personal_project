@@ -8,24 +8,162 @@
 			color: grey;
 			background-color: 	#EE82EE;
 		}
+
+    .card{
+      font-family: bubblegum;
+      border-radius: 5%;
+    }
+    .pos {
+        position: absolute;
+        top: 31%;
+        right: 3%;
+    }
+
+    .pos2 {
+        position: absolute;
+        top: 31%;
+        right: 38%;
+    }
+        .pos3 {
+        position: absolute;
+        top: 31%;
+        right: 73%;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 450px;
+      height: 450px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px; 
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: grey;
+      color: white;
+      transform: rotateY(180deg);
+    } 
 	</style>
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">MY BODY & I</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/home">HOME<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/way_to_love">WAY TO LOVE <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/about_us">ABOUT US</a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/my_story">MY STORY</a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/access_stories">STORIES</a>
+      <a class="nav-item nav-link active" href="http://127.0.0.1:5000/reserches">RESERCHES</a>
+
     </div>
   </div>
 </nav>
+
+ <h1 class="display-1"> <center>MY BODY & I - THE FULL WEBSITE</center> </h1>
+
+ <div class="flip-card pos card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="../static/image.jpg" alt="" style="width:450px;height:450px;">
+    </div>
+    <div class="flip-card-back" align="center">
+
+      <h1>.</h1>
+      <h1>.</h1>
+      <h1>YOU</h1>
+      <h1>ARE</h1>
+      <h1>BEAUTIFUL</h1>
+      <h1>.</h1>
+      <h1>.</h1>
+      
+
+    </div>
+  </div>
+</div> 
+
+    </div>
+  </div>
+</nav>
+
+
+ <div class="flip-card pos2 card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="../static/never.jpeg" alt="" style="width:450px;height:450px;">
+    </div>
+    <div class="flip-card-back" align="center">
+
+      <h1>.</h1>
+      <h1>.</h1>
+      <h1>NEVER</h1>
+      <h1>EVER</h1>
+      <h1>CHANGE</h1>
+      <h1>.</h1>
+      <h1>.</h1>
+      
+
+    </div>
+  </div>
+</div> 
+
+
+    </div>
+  </div>
+</nav>
+
+
+ <div class="flip-card pos3 card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="../static/keep.jpeg" alt="" style="width:450px;height:450px;">
+    </div>
+    <div class="flip-card-back" align="center">
+
+      <h1>.</h1>
+      <h1>.</h1>
+      <h1>KEEP</h1>
+      <h1>BEING</h1>
+      <h1>YOURSELF</h1>
+      <h1>.</h1>
+      <h1>.</h1>
+
+    </div>
+  </div>
+</div> 
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

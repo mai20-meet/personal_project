@@ -8,7 +8,7 @@ Base = declarative_base()
 class Story(Base):
    __tablename__ = 'mystory'
    id = Column(Integer, primary_key=True)
-   name= Column(String)
+   name= Column(String)        
    time=Column(String)
    title=Column(String)
    story=Column(String)
